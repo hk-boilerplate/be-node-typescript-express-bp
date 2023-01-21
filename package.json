@@ -1,0 +1,45 @@
+{
+  "name": "be-node-typescript-express-bp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "npx nodemon",
+    "start": "npm run build && node build/index.js",
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hk-boilerplate/be-node-typescript-express-bp.git"
+  },
+  "keywords": [],
+  "author": "hariraghupathy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hk-boilerplate/be-node-typescript--express-bp/issues"
+  },
+  "homepage": "https://github.com/hk-boilerplate/be-node-typescript-express-bp#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
+    "rimraf": "^4.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-format && npm run lint"
+    }
+  }
+}
