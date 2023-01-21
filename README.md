@@ -13,3 +13,7 @@ https://khalilstemmler.com/blogs/tooling/prettier/
 # Enforcing coding conventions with husky
 
 https://khalilstemmler.com/blogs/tooling/enforcing-husky-precommit-hooks/
+
+# Setting env variables
+
+Copy content from .example.env and replace it after creating .env in the root folder
